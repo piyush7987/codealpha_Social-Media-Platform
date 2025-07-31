@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocialApp - Connect & Share</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   
+    
+</nav>
+
+    <div class="container">
+        <!-- Welcome Section -->
+        
+        <div class="welcome-section">
+            <div class="logo">🚀 SocialApp</div>
+            <div class="welcome-text">Connect with friends and share your moments</div>
+            <ul class="features">
+                <li>Share photos and thoughts</li>
+                <li>Connect with friends</li>
+                <li>Join conversations</li>
+                <li>Discover new content</li>
+            </ul>
+            
+        </div>
+
+        <!-- Login Section -->
+        <div class="login-section">
+            <div class="form-header">
+                <h1 class="form-title">Welcome Back</h1>
+                <p class="form-subtitle">Sign in to continue your journey</p>
+            </div>
+
+            <!-- Auth Tabs -->
+            <div class="auth-tabs">
+                <button class="tab-btn active" onclick="switchTab('login')">Login</button>
+                <button class="tab-btn" onclick="switchTab('register')">Register</button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="authForm" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <input type="email" class="form-input" placeholder="Email address" required id="email">
+                </div>
+
+                <!-- Register-only fields -->
+                <div class="register-fields" id="registerFields">
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="Full Name" id="fullName">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="Username" id="username">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" class="form-input" placeholder="Password" required id="password">
+                    <button type="button" class="password-toggle" onclick="togglePassword()">👁️</button>
+                </div>
+
+                <div class="register-fields">
+                    <div class="form-group">
+                        <input type="password" class="form-input" placeholder="Confirm Password" id="confirmPassword">
+                    </div>
+                </div>
+
+                <button type="submit" class="login-btn" id="submitBtn">Sign In</button>
+            </form>
+
+            <div class="forgot-password">
+                <a href="#" onclick="showForgotPassword()">Forgot your password?</a>
+            </div>
+
+            <!-- Social Login -->
+            <div class="social-login">
+                <div class="social-title">or continue with</div>
+                <div class="social-buttons">
+                    <button class="social-btn" onclick="socialLogin('google')">
+                        <span>📧</span> Google
+                    </button>
+                    <button class="social-btn" onclick="socialLogin('facebook')">
+                        <span>📘</span> Facebook
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Error/Success Message Container -->
+    <div id="messageContainer" class="message-container"></div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>
