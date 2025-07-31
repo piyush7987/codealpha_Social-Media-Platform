@@ -322,7 +322,3 @@ If you encounter any issues or have questions:
 - [ ] Analytics and insights
 
 ---
-
-**Happy Coding! 🎉**
-
-Built with ❤️ by [Your Name]
